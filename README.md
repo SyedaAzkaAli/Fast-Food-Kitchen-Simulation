@@ -1,2 +1,16 @@
 # Fast-Food-Kitchen-Simulation
-OS project using semaphores &amp; threads
+
+### Concepts Used
+- Priority Scheduling and FCFS 
+- Semaphores
+- Mutex Locks
+- Thread Synchronization
+- Deadlock detection and recovery
+
+### Frontend
+- HTML
+- CSS
+
+### Backend 
+- JavaScript
+
