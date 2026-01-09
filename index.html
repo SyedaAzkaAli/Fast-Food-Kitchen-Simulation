@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooking Chaos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <div class="brand">
+                <h1> Cooking Chaos</h1>
+                <p style="color: var(--text-muted); font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">
+                    Master Chef Edition</p>
+            </div>
+
+            <div class="stats-panel">
+                <div class="stat-card">
+                    <span class="stat-label">Total Cash</span>
+                    <span class="stat-value" id="stat-cash" style="color: var(--primary-green);">$0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Chef Rating</span>
+                    <span class="stat-value" id="stat-rating">⭐⭐⭐⭐⭐</span>
+                </div>
+                <div class="stat-card" style="border: none;">
+                    <span class="stat-label">Kitchen Status</span>
+                    <span class="stat-value" id="stat-heat">Low</span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            
+            <div class="ready-orders-column">
+                <div class="section-container">
+                    <h3>Incoming Orders </h3>
+                    <div id="queue-list" class="order-list">
+                        <div style="text-align: center; color: #94a3b8; margin-top: 40px;">
+                            <p>No new orders yet!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button id="btn-add-order" class="btn btn-add">New Guest Arrival</button>
+                    <button id="btn-deadlock" class="btn btn-deadlock">Chaos Rush Hour</button>
+                </div>
+            </div>
+
+            
+            <div class="kitchen-floor-column">
+                <div class="section-container">
+                    <div
+                        style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+                        <h3>Chef Stations 🔪🍳</h3>
+                        <div id="resource-monitors" style="display: flex; gap: 12px;">
+                            
+                        </div>
+                    </div>
+
+                    <div id="kitchen-slots" class="kitchen-grid">
+                        
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 10px;">
+                    <button id="btn-auto" class="btn btn-auto" style="flex: 1;">Assistant: Off</button>
+                    <button id="btn-reset" class="btn btn-reset">Clean Kitchen</button>
+                </div>
+            </div>
+
+            <div class="events-column">
+                <div class="section-container" style="max-height: 45%; margin-bottom: 16px;">
+                    <h3>Kitchen Diary </h3>
+                    <div id="event-log" class="event-log">
+                        <div class="log-line">Welcome to the Master Chef kitchen!</div>
+                    </div>
+                </div>
+
+                <div class="section-container">
+                    <h3>Cooking Tips </h3>
+                    <div style="font-size: 0.8rem; line-height: 1.6; color: var(--text-muted);">
+                        <p><strong>Quick Service:</strong> Click an order to start cooking. Serve VIPs first for 2x
+                            cash!</p>
+                        <br>
+                        <p><strong>Tools & Slots:</strong> You have 3 stations, but only 1 stove and 1 knife. Use them
+                            wisely!</p>
+                        <br>
+                        <p><strong>Station Jams:</strong> If you trigger Rush Hour, stations might jam. Wait for the
+                            Head Chef to fix it.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="notif-toast"
+        style="position: fixed; bottom: 30px; left: 50%; transform: translateX(-50%); background: #1e293b; color: white; padding: 12px 24px; border-radius: 30px; font-weight: 600; display: none; z-index: 1000; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
